@@ -1,4 +1,5 @@
 devtools::install_github("pjx1990/my_rpackage/rmytools")
 library(rmytools)
 ?idmapping
-idmapping(qurey="B6VQ60",inputid="ACC",outputid="P_ENTREZGENEID")
+idmapping(query="B6VQ60",inputid="ACC",outputid="P_ENTREZGENEID")
+remove.packages(rmytools)
