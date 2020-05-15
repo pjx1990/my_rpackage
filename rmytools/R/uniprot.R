@@ -15,7 +15,7 @@
 #' result <- idmapping(query=proid, inputid="ACC", outputid="P_ENTREZGENEID", fmt="fmt")
 #'
 idmapping <- function(query, inputid, outputid, fmt){
-  query <- paste(qurey,collapse = ",")
+  query <- paste(query,collapse = ",")
   r <- httr::POST('http://www.uniprot.org/uploadlists/',
                   body = list(from=inputid, to=outputid, format=fmt,query=query),encode = "form")
   cont <- httr::content(r, type = "text")
